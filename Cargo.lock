@@ -334,6 +334,8 @@ dependencies = [
  "defmt",
  "defmt-rtt",
  "embedded-hal 1.0.0",
+ "fugit",
+ "heapless",
  "panic-probe",
  "rp-pico",
 ]
