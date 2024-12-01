@@ -52,7 +52,7 @@ fn main() -> ! {
     loop {
         //i2c.read(0x01u8, &mut buf).ok();
         //defmt::println!("{=[u8]:02x}", buf);
-        i2c.write_read(0x6Bu8, &[0xDE, 0xAD, 0xBE, 0xEF], &mut buf).ok();
+        i2c.write_read(0x6Bu8, &[0xDE, 0xAD, 0xBE, 0xEF, 0xC0, 0x01, 0xCA, 0xFE], &mut buf).ok();
         //i2c.write(0x01u8, &[0xDE, 0xAD, 0xBE, 0xEF]).ok();
         cortex_m::asm::delay(125_000_000);
     }
